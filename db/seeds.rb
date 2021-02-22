@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+require 'open-uri'
+
+number = 1
+4.times do
+  url = "https://swapi.dev/api/planets/?page=#{number}"
+
+  starships_seed = open(url).read
+  starships_resource = JSON.parse(starships_seed)
+  data = starships_resource['results']
+
+  data.each do |starship|
+    Starship.create(
+      name: starship['name'],
+      model: starship['model'],
+      cost: starship['cost_in_credits'],
+      length: starship['length'],
+      max_speed: starship['max_atmosphering_speed'],
+      crew: starship['crew'],
+      cargo_capacity: starship['cargo_capacity'],
+      starship_class: starship['starship_class']
+    )
+  end
+  number += 1
+end
