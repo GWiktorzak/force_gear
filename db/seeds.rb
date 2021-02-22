@@ -1,9 +1,18 @@
 require 'json'
 require 'open-uri'
+require 'faker'
+
+36.times do
+  User.create(
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password
+  )
+end
 
 number = 1
 4.times do
-  url = "https://swapi.dev/api/planets/?page=#{number}"
+  url = "https://swapi.dev/api/starships/?page=#{number}"
 
   starships_seed = open(url).read
   starships_resource = JSON.parse(starships_seed)
