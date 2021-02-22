@@ -8,6 +8,7 @@ number = 1
   starships_seed = open(url).read
   starships_resource = JSON.parse(starships_seed)
   data = starships_resource['results']
+  user_id = 1
 
   data.each do |starship|
     Starship.create(
@@ -18,8 +19,10 @@ number = 1
       max_speed: starship['max_atmosphering_speed'],
       crew: starship['crew'],
       cargo_capacity: starship['cargo_capacity'],
-      starship_class: starship['starship_class']
+      starship_class: starship['starship_class'],
+      user_id: user_id
     )
+    user_id += 1
   end
   number += 1
 end
