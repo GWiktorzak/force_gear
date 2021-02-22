@@ -2,12 +2,10 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
+
 36.times do 
   User.create(username: Faker::Internet.username, email: Faker::Internet.free_email, password: Faker::Internet.password)
 end
-
-
-
 
 number = 1
 4.times do
@@ -17,6 +15,7 @@ number = 1
   starships_resource = JSON.parse(starships_seed)
   data = starships_resource['results']
   user_id = number
+
   data.each do |starship|
     Starship.create(
       name: starship['name'],
@@ -31,6 +30,7 @@ number = 1
       starship_class: starship['starship_class'],
       user_id: user_id
     )
+    user_id += 1
   end
   number += 1
 end
