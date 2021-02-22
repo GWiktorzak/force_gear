@@ -1,2 +1,24 @@
 // Import page-specific CSS files here.
 @import "home";
+
+h1 {
+  margin-bottom: 16px;
+}
+
+.index-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  margin-left: 15px;
+}
