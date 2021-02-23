@@ -14,7 +14,9 @@ gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use dotenv
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [ :development, :test ]
+# Use cloudinary to store images
+gem 'cloudinary', '~> 1.16.0'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
