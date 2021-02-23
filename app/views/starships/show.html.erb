@@ -12,4 +12,8 @@
     <p class="card-text">Cargo Capacity: <%= @starship.cargo_capacity %></p>
     <p class="card-text">Class<%= @starship.starship_class %></p>
   </div>
+
+  <%= link_to new_starship_booking_path(@starship), class: 'btn btn-primary' do %>
+    Make a booking
+  <% end %>
 </div>
