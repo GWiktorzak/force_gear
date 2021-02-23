@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params.merge(user_id: current_user.id))
     find_starship
     @booking.starship = @starship
-    if @booking.save!
+    if @booking.save
       redirect_to starship_path(@starship)
     else
       render :new
