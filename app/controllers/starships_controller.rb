@@ -15,7 +15,11 @@ skip_before_action :authenticate_user!, only: [:show, :index]
 
   def create
     @starship = Starship.new(starship_params)
-
+    if @starship.save
+      redirect_to @starship
+    else
+      render :new
+    end
   end
 
   private
