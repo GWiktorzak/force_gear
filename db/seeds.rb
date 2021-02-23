@@ -18,7 +18,7 @@ number = 1
   location = "London"
 
   data.each do |starship|
-    Starship.create(
+    starship = Starship.create(
       name: starship['name'],
       model: starship['model'],
       manufacturer: starship['manufacturer'],
@@ -33,6 +33,7 @@ number = 1
       location: location
     )
     user_id += 1
+    p starship.id
   end
   number += 1
 end
