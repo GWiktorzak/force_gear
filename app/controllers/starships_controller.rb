@@ -13,6 +13,14 @@ skip_before_action :authenticate_user!, only: [:show, :index]
     @starship = Starship.new
   end
 
+  def edit
+    @starship = Starship.find(params[:id])
+  end
+
+  def update
+    
+  end
+
   def create
     @starship = Starship.new(starship_params.merge(user_id: current_user.id))
     if @starship.save!
