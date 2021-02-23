@@ -1,8 +1,12 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
+
 h1 {
+  font-family: 'Russo One', sans-serif;
   margin-bottom: 16px;
+  color: #F3CC09
 }
 
 .index-body {
@@ -14,6 +18,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+
 }
 
 .card-text {
