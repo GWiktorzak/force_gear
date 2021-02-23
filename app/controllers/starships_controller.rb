@@ -1,5 +1,5 @@
 class StarshipsController < ApplicationController
-skip_before_action :authenticate_user!, only: [:show, :index]
+  skip_before_action :authenticate_user!, only: %i[show index]
 
   def index
     @starships = Starship.all
@@ -18,7 +18,10 @@ skip_before_action :authenticate_user!, only: [:show, :index]
   end
 
   def update
-    
+    @starship = Starship.find(params[:id])
+    @starship.update(starship_params)
+
+    redirect_to starship_path(@starship)
   end
 
   def create
@@ -33,6 +36,7 @@ skip_before_action :authenticate_user!, only: [:show, :index]
   private
 
   def starship_params
-    params.require(:starship).permit(:name, :model, :manufacturer, :cost, :length, :max_speed, :crew, :passengers, :cargo_capacity, :starship_class, :location, :photo)
+    params.require(:starship).permit(:name, :model, :manufacturer, :cost, :length, :max_speed, :crew, :passengers,
+                                     :cargo_capacity, :starship_class, :location, :photo)
   end
 end
