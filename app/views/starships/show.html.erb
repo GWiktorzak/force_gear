@@ -1,9 +1,6 @@
 
 <div class="card" style="width: 18rem;">
-  <%= image_tag("X-Wing.jpg") %>
-  
- 
-  <!-- <img src="../../assets/images/X-Wing.jpg" class="card-img-top" alt="..."> -->
+  <%= cl_image_tag @article.photo.key, height: 260, width: 375, crop: :fill %>
   <div class="card-body">
     <h3><%= @starship.name %></h3>
     <p class="card-text">Model: <%= @starship.model %></p>
