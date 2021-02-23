@@ -14,8 +14,8 @@ skip_before_action :authenticate_user!, only: [:show, :index]
   end
 
   def create
-    @starship = Starship.new(starship_params)
-    if @starship.save
+    @starship = Starship.new(starship_params.merge(user_id: current_user.id))
+    if @starship.save!
       redirect_to @starship
     else
       render :new
