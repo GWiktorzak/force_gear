@@ -15,6 +15,7 @@ number = 1
   starships_resource = JSON.parse(starships_seed)
   data = starships_resource['results']
   user_id = number
+  location = "London"
 
   data.each do |starship|
     Starship.create(
@@ -28,7 +29,8 @@ number = 1
       passengers: starship['passengers'],
       cargo_capacity: starship['cargo_capacity'],
       starship_class: starship['starship_class'],
-      user_id: user_id
+      user_id: user_id,
+      location: location
     )
     user_id += 1
   end
