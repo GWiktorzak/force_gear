@@ -12,5 +12,10 @@
     <p class="card-text">Cargo Capacity: <%= @starship.cargo_capacity %></p>
     <p class="card-text">Class<%= @starship.starship_class %></p>
     <%= link_to 'Edit', edit_starship_path %>
+    <!-- app/views/restaurants/show.html.erb -->
+<%= link_to "Delete",
+starship_path(@starship),
+method: :delete,
+data: { confirm: "Are you sure?" } %>
   </div>
 </div>

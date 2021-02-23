@@ -32,6 +32,13 @@ class StarshipsController < ApplicationController
     end
   end
 
+  def destroy
+    @starship = Starship.find(params[:id])
+    @starship.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def starship_params
