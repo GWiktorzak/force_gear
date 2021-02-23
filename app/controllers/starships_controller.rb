@@ -20,7 +20,6 @@ class StarshipsController < ApplicationController
   def update
     @starship = Starship.find(params[:id])
     @starship.update(starship_params)
-
     redirect_to starship_path(@starship)
   end
 
