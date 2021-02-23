@@ -10,9 +10,15 @@
     <p class="card-text">Crew required: <%= @starship.crew %></p>
     <p class="card-text">Passengers: <%= @starship.passengers %></p>
     <p class="card-text">Cargo Capacity: <%= @starship.cargo_capacity %></p>
-    <p class="card-text">Class: <%= @starship.starship_class %></p>
-  </div>
 
+    <p class="card-text">Class<%= @starship.starship_class %></p>
+    <%= link_to 'Edit', edit_starship_path %>
+    <!-- app/views/restaurants/show.html.erb -->
+<%= link_to "Delete",
+starship_path(@starship),
+method: :delete,
+data: { confirm: "Are you sure?" } %>
+  </div>
   <%= link_to new_starship_booking_path(@starship), class: 'btn btn-primary' do %>
     Make a booking
   <% end %>
