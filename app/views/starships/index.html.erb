@@ -1,12 +1,14 @@
 <div class="container">
-  <h1>Available Starships</h1>
+  <h1>STARSHIPS</h1>
   <div class="container index-body">
     <div class="cards">
       <% @starships.each do |starship| %>
+
         <div class="card">
+            <%= link_to starship do %>
             <img src="https://upload.wikimedia.org/wikipedia/en/8/8d/A_screenshot_from_Star_Wars_Episode_IV_A_New_Hope_depicting_the_Millennium_Falcon.jpg" alt="starship-image">
+            <% end %>
             <div class="card-text">
-              <%# <%= link_to starship.name, starship%>
               <p><%= starship.name %></p>
               <p><%= starship.model %></p>
             </div>
