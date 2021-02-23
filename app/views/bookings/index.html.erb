@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>My Bookings</h1>
+  <div class="table">
+    <% @bookings.each do |booking| %>
+      <p><%= booking.booking_start_date %> <%= booking.booking_end_date %></p>
+    <% end %>
+  </div>
+</div>

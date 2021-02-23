@@ -5,11 +5,15 @@
     <h3><%= @starship.name %></h3>
     <p class="card-text">Model: <%= @starship.model %></p>
     <p class="card-text">Manufacturer: <%= @starship.manufacturer %></p>
-    <p class="card-text">Cost:<%= @starship.cost %></p>
+    <p class="card-text">Cost: <%= @starship.cost %></p>
     <p class="card-text">Max Speed: <%= @starship.max_speed %></p>
-    <p class="card-text">Crew required<%= @starship.crew %></p>
+    <p class="card-text">Crew required: <%= @starship.crew %></p>
     <p class="card-text">Passengers: <%= @starship.passengers %></p>
     <p class="card-text">Cargo Capacity: <%= @starship.cargo_capacity %></p>
-    <p class="card-text">Class<%= @starship.starship_class %></p>
+    <p class="card-text">Class: <%= @starship.starship_class %></p>
   </div>
+
+  <%= link_to new_starship_booking_path(@starship), class: 'btn btn-primary' do %>
+    Make a booking
+  <% end %>
 </div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>New Booking</h1>
+
+  <%= render 'form', booking: @booking %>
+
+  <%= link_to starship_path(@starship) do %>
+    <i class="fas fa-undo-alt"></i> Back
+  <% end %>
+</div>
