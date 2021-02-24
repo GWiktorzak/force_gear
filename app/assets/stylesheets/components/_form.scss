@@ -74,3 +74,13 @@
     border: 1px solid #F3CB08;
   }
 }
+.form-actions input[type=submit] {
+  background: #F3CB08;
+  font-size: 16px;
+  color:black;
+  border: 1px solid #F3CB08;
+  border-radius: 3px;
+  &:hover {
+    box-shadow: 1px 1px 16px rgba(243, 203, 8, 0.6);
+  }
+}
