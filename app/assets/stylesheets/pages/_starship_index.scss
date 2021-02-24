@@ -1,0 +1,28 @@
+h1 {
+  font-family: 'Russo One', sans-serif;
+  margin-bottom: 16px;
+  color: #F3CC09;
+}
+
+.index-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+}
+
+.card-text {
+  padding: 8px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  margin-left: 15px;
+}
