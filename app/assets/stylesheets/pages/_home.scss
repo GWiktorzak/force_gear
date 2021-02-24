@@ -22,7 +22,9 @@ body {
 
 .home {
   h1 {
-    color: #FFF;
+    font-family: 'Russo One', sans-serif;
+    color: #F7CD07;
+    letter-spacing: 2px;
 
     padding: 90px 0px 0px 20px;
   }
@@ -38,30 +40,25 @@ body {
 
 
 .search-btn {
-  color: #999999;
-  font-weight: lighter;
-  opacity: 0.6;
-  max-width: 195px;
+  opacity: 1;
+  margin-left: 20px;
+  border: 1.6px solid #F7CD07;
+  padding: 16px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #F7CD07;
+  font-weight: bold;
 
 }
 
 .search-btn:hover {
-  opacity: 1;
   text-decoration: none;
+  box-shadow: 2px 2px 16px #F7CD07;
+  color: #F7CD07;
 
 }
 
-.search-home {
-  padding-left: 20px;
-}
 
-.search-btn a {
-  border: 1px solid #999999;
-  padding: 16px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  color: white;
-}
 
 
 
