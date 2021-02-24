@@ -2,3 +2,34 @@
 @import "home";
 @import "starship_index";
 
+h1 {
+  font-family: 'Russo One', sans-serif;
+  margin-bottom: 16px;
+  color: #F3CC09
+}
+
+.index-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  margin-bottom: 0;
+}
+
+.card-text {
+  padding: 8px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 56px;
+  margin-left: 15px;
+  margin-bottom: 16px;
+}
+
+.card {
+  max-width: 680px;
+
+}

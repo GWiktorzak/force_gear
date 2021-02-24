@@ -1,23 +1,30 @@
 <div class="container">
+  <br>
   <h1>STARSHIPS</h1>
   <div class="container index-body">
     <div class="cards">
       <% @starships.each do |starship| %>
-
-        <div class="card">
-            <%= link_to starship do %>
-            <%= cl_image_tag starship.photo.key, height: 260, width: 375, crop: :fill %>
-
-            <% end %>
-            <div class="card-text">
-              <p><%= starship.name %></p>
-              <p><%= starship.model %></p>
+        <div class="card mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <%= image_tag "X-Wing.jpg", alt: "alttext", class: "card-image" %>
             </div>
-            <%= link_to 'Show', starship_path(starship) %>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= starship.name %></h5>
+                <p class="card-text"><%= starship.model %></p>
+                <p class="card-link"><%= link_to "Step inside", starship_path(starship) %></p>
+                <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(starship.updated_at) %></small></p>
+              </div>
+            </div>
+          </div>
         </div>
+
       <% end %>
     </div>
 
     <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiY2ljYWRhLTEiLCJhIjoiY2trc2NyeHFxMDhscjJxbXN1cmw2cXU5NyJ9.8ZeU8uCA6umwM8gzgkU4yw'>
   </div>
 </div>
+
+
