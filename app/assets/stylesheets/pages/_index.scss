@@ -2,7 +2,6 @@
 @import "home";
 
 
-
 h1 {
   font-family: 'Russo One', sans-serif;
   margin-bottom: 16px;
@@ -15,10 +14,7 @@ h1 {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-
+  margin-bottom: 0;
 }
 
 .card-text {
@@ -28,6 +24,12 @@ h1 {
 #map {
   height: 100vh;
   position: sticky;
-  top: 0;
+  top: 56px;
   margin-left: 15px;
+  margin-bottom: 16px;
+}
+
+.card {
+  max-width: 680px;
+
 }
