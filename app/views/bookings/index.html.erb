@@ -17,7 +17,7 @@
           <td><%= booking.booking_start_date %></td>
           <td><%= booking.booking_end_date %></td>
           <td>
-            <%= link_to bookings_path, method: :delete, data: { confirm: "Are you sure?" } do %>
+            <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete booking for #{booking.starship.name}?" } do %>
               <i class="far fa-trash-alt"></i>
             <% end %>
           </td>
