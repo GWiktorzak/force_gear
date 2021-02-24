@@ -1,8 +1,8 @@
 <div class="fg-container">
 
   <%= simple_form_for(@starship) do |f| %>
-    <div class="form-inputs fg-group">
-      <%= f.input :name { class: 'fg-form-input' }%>
+    <div class="fg-card">
+      <%= f.input :name %>
       <%= f.input :model %>
       <%= f.input :manufacturer %>
       <%= f.input :cost %>
@@ -14,11 +14,12 @@
       <%= f.input :starship_class %>
       <%= f.input :location %>
       <%= f.input :photo, as: :file %>
+      <div class="form-inputs">
+        <%= f.button :submit, class: "custom-button" %>
+      </div>
     </div>
   
-    <div class="form-inputs">
-      <%= f.button :submit, class: "btn-primary" %>
-    </div>
+  
   
   <% end %>
 
