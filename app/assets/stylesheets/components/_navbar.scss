@@ -5,10 +5,19 @@
   top: 0;
 }
 
-.navbar-lewagon .navbar-collapse {
+#navbarSupportedContent {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link-messages {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.55);
+  &:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+  }
 }
