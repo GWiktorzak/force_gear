@@ -1,20 +1,25 @@
-<%= simple_form_for(@starship) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :model %>
-    <%= f.input :manufacturer %>
-    <%= f.input :cost %>
-    <%= f.input :length %>
-    <%= f.input :max_speed %>
-    <%= f.input :crew %>
-    <%= f.input :passengers %>
-    <%= f.input :cargo_capacity %>
-    <%= f.input :starship_class %>
-    <%= f.input :location %>
-    <%= f.input :photo, as: :file %>
-  </div>
+<div class="fg-container">
 
-  <div class="form-inputs">
-    <%= f.button :submit, class: "btn-primary" %>
-  </div>
-<% end %>
+  <%= simple_form_for(@starship) do |f| %>
+    <div class="form-inputs fg-group">
+      <%= f.input :name { class: 'fg-form-input' }%>
+      <%= f.input :model %>
+      <%= f.input :manufacturer %>
+      <%= f.input :cost %>
+      <%= f.input :length %>
+      <%= f.input :max_speed %>
+      <%= f.input :crew %>
+      <%= f.input :passengers %>
+      <%= f.input :cargo_capacity %>
+      <%= f.input :starship_class %>
+      <%= f.input :location %>
+      <%= f.input :photo, as: :file %>
+    </div>
+  
+    <div class="form-inputs">
+      <%= f.button :submit, class: "btn-primary" %>
+    </div>
+  
+  <% end %>
+
+</div>

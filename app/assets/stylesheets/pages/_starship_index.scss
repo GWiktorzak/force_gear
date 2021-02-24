@@ -1,11 +1,7 @@
-// Import page-specific CSS files here.
-@import "home";
-@import "starship_index";
-
 h1 {
   font-family: 'Russo One', sans-serif;
   margin-bottom: 16px;
-  color: #F3CC09
+  color: #F3CC09;
 }
 
 .index-body {
@@ -14,7 +10,10 @@ h1 {
 }
 
 .cards {
-  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
 }
 
 .card-text {
@@ -24,12 +23,6 @@ h1 {
 #map {
   height: 100vh;
   position: sticky;
-  top: 56px;
+  top: 0;
   margin-left: 15px;
-  margin-bottom: 16px;
-}
-
-.card {
-  max-width: 680px;
-
 }
