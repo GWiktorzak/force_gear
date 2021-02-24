@@ -23,7 +23,12 @@
     </ul>
       <% if user_signed_in? %>
         <div class="nav-link">
-          <%= link_to "#", class: "nav-link-messages" do %>
+          <%= link_to new_starship_path, class: "nav-link-left" do %>
+            <i class="fas fa-plus"></i> Add Starship
+          <% end %>
+        </div>
+        <div class="nav-link">
+          <%= link_to "#", class: "nav-link-left" do %>
             <i class="far fa-envelope"></i> Messages
           <% end %>
         </div>
@@ -38,7 +43,7 @@
         </div>
       <% else %>
         <a class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link-left" %>
         </a>
       <% end %>
   </div>
