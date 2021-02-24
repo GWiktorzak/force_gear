@@ -1,0 +1,76 @@
+
+.fg-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fg-card {
+  width: 40vw;
+  background: none;
+  border: 1px solid #F3CB08;
+  border-radius: 6px;
+  box-shadow: 1px 1px 16px rgba(243, 203, 8, 0.6);
+  margin-top: 32px;
+  margin-bottom: 64px;
+  padding: 32px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fg-card div {
+  margin-top: 16px;
+  padding: 0;
+  width: 80%;
+}
+
+.fg-card label {
+  width: 80%;
+  color: #F3CB08;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+
+}
+
+.fg-card input{
+  width: 80%;
+  border: 1px solid #F3CB08;
+  border-radius: 3px;
+  background: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#starship_photo {
+  color:#F3CB08;
+}
+//
+ .custom-button {
+  min-width: 65px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 16px;
+  background-color: none;
+  color: #F3CB08;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed";
+  font-weight: bolder;
+  border: 1px solid #F3CB08;
+  border-radius: 3px;
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: #F3CB08;
+    color: black;
+    border: 1px solid #F3CB08;
+  }
+}
