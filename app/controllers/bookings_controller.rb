@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
 
-    redirect_to bookings_path
+    redirect_to bookings_path, notice: "Booking for #{@booking.starship.name} was deleted"
   end
 
   private
