@@ -40,10 +40,15 @@
 .fg-card input{
   width: 80%;
   border: 1px solid #F3CB08;
+  color: #F3CB08;
   border-radius: 3px;
   background: none;
   margin-top: 0;
   margin-bottom: 0;
+}
+.fg-card input:focus{
+  color: #F3CB08;
+  background: black;
 }
 
 #starship_photo {
