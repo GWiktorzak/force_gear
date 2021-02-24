@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
@@ -13,7 +15,7 @@
   width: 40px;
 }
 
-.nav-link-messages {
+.nav-link-right {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.55);
   &:hover {
