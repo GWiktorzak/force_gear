@@ -1,8 +1,28 @@
 <div class="container">
   <h1>My Bookings</h1>
-  <div class="table">
-    <% @bookings.each do |booking| %>
-      <p><%= booking.booking_start_date %> <%= booking.booking_end_date %></p>
-    <% end %>
-  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Starship</th>
+        <th>Booking Start Date</th>
+        <th>Booking End Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= link_to booking.starship.name, booking.starship, class: 'table-column-one' %></td>
+          <td><%= booking.booking_start_date %></td>
+          <td><%= booking.booking_end_date %></td>
+          <td>
+            <%= link_to bookings_path, method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
