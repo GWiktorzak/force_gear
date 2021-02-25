@@ -1,22 +1,16 @@
 <div class="fg-container">
-
+  <!-- <div class="bg-video">
+    <%= video_tag "death_star.mp4", autoplay: true, loop: loop, mute: true, class: "bg-video__content" %>
+  </div> -->
   <%= simple_form_for(@starship) do |f| %>
-    <div class="fg-card">
-      <%= f.input :name %>
-      <%= f.input :model %>
-      <%= f.input :manufacturer %>
-      <%= f.input :cost %>
-      <%= f.input :length %>
-      <%= f.input :max_speed %>
-      <%= f.input :crew %>
-      <%= f.input :passengers %>
-      <%= f.input :cargo_capacity %>
-      <%= f.input :starship_class %>
-      <%= f.input :location %>
-      <%= f.input :photo, as: :file %>
-      <div class="form-inputs">
-        <%= f.button :submit, class: "custom-button" %>
-      </div>
+    <div class="fg-form">
+      <%= f.input :name, placeholder:'Starship Name'%>
+      <%= f.input :cost, placeholder:'Cost' %>
+      <%= f.input :max_speed, placeholder:'Max Speed' %>
+      <%= f.input :crew , placeholder:'Crew'%>
+      <%= f.input :crew , placeholder:'Crew'%>
+     
+        <%= f.button :submit, class: "cta-btn" %>
     </div>
   
   
