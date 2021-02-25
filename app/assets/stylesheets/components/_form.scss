@@ -1,91 +1,106 @@
+.body-page {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    padding: 32px;
+  }
+}
+
+.login-and-signup-container {
+  color: white;
+  margin-top: 6rem;
+}
+
 
 .fg-container{
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  h1 {
+    padding: 32px;
+  }
 }
 
-.fg-card {
-  width: 40vw;
+
+.fg-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fg-form {
+  width: 45vw;
   background: none;
-  border: 1px solid #F3CB08;
-  border-radius: 6px;
-  box-shadow: 1px 1px 16px rgba(243, 203, 8, 0.6);
-  margin-top: 32px;
-  margin-bottom: 64px;
-  padding: 32px;
+  border-radius: 16px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  clear: both;
+  opacity:0.9;
+  filter: alpha(opacity = 40);
+  padding: 32px 8px;
 }
-.fg-card div {
-  margin-top: 16px;
+.fg-form div {
+  width: 80%;
+  margin: 0;
   padding: 0;
-  width: 80%;
+  margin-bottom: 16px;
 }
 
-.fg-card label {
+label {
   width: 80%;
-  color: #F3CB08;
+  color: black;
   text-transform: uppercase;
-  font-size: 14px;
-  font-family: sans-serif;
+  font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1.4px;
   margin-bottom: 0;
-
 }
 
-.fg-card input{
-  width: 80%;
-  border: 1px solid #F3CB08;
-  color: #F3CB08;
-  border-radius: 3px;
+.fg-form input{
+  border: none;
+  color: black;
+  border-bottom:1px solid black;
   background: none;
   margin-top: 0;
   margin-bottom: 0;
 }
-.fg-card input:focus{
-  color: #F3CB08;
-  background: black;
+
+.fg-form input[type=submit] {
+  margin-top: 16px;
 }
 
-#starship_photo {
-  color:#F3CB08;
-}
-//
- .custom-button {
-  min-width: 65px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 16px;
-  background-color: none;
-  color: #F3CB08;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed";
-  font-weight: bolder;
-  border: 1px solid #F3CB08;
-  border-radius: 3px;
-  cursor: pointer;
 
-
-  &:hover {
-    background-color: #F3CB08;
-    color: black;
-    border: 1px solid #F3CB08;
-  }
+.fg-form input:focus{
+  color: black;
+  background: white;
+  outline: none;
+  box-shadow: 1px 1px 6px rgba(243, 203, 8, 0.6);
+  border: none;
 }
-.form-actions input[type=submit] {
-  background: #F3CB08;
-  font-size: 16px;
-  color:black;
-  border: 1px solid #F3CB08;
-  border-radius: 3px;
-  &:hover {
-    box-shadow: 1px 1px 16px rgba(243, 203, 8, 0.6);
-  }
+.fg-form input[type=file] {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 14px;
+}
+.fg-form input::-webkit-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 14px;
 }

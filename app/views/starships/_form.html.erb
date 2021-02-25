@@ -1,19 +1,14 @@
 <div class="fg-container">
 
   <%= simple_form_for(@starship) do |f| %>
-    <div class="fg-card">
-      <%= f.input :name %>
-      <%= f.input :cost %>
-      <%= f.input :location %>
-      <%= f.input :description %>
+    <div class="fg-form">
+      <%= f.input :name, placeholder:'Starship Name'%>
+      <%= f.input :cost, placeholder:'Cost' %>
+      <%= f.input :location, placeholder:'Max Speed' %>
+      <%= f.input :description , placeholder:'Crew'%>
       <%= f.input :photo, as: :file %>
-      <div class="form-inputs">
-        <%= f.button :submit, class: "custom-button" %>
-      </div>
+      <%= f.button :submit, class: "cta-btn" %>
     </div>
-  
-  
-  
   <% end %>
 
 </div>
