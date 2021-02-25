@@ -12,7 +12,8 @@
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title"><%= starship.name %></h5>
-                <p class="card-text"><%= starship.model %></p>
+                <p class="card-text"><%= starship.description %></p>
+                <p class="card-text"><%= starship.cost %></p>
                 <p class="card-link"><%= link_to "Step inside", starship_path(starship) %></p>
                 <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(starship.updated_at) %></small></p>
               </div>
