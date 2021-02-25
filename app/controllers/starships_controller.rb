@@ -4,6 +4,14 @@ class StarshipsController < ApplicationController
 
   def index
     @starships = Starship.all
+
+    @markers = @starships.geocoded.map do |starship|
+      {
+        lat: starship.latitude,
+        lng: starship.longitude,
+        image_url: helpers.asset_url('Vector.png')
+      }
+    end
   end
 
   def show
