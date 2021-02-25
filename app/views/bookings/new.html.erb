@@ -1,9 +1,15 @@
 <div class="container">
-  <h1>New Booking</h1>
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-8 col-lg-6 ">
+      <h1>New Booking</h1>
 
-  <%= render 'form', booking: @booking %>
+      <%= render 'form', booking: @booking %>
 
-  <%= link_to starship_path(@starship) do %>
-    <i class="fas fa-undo-alt"></i> Back
-  <% end %>
+      <%= link_to starship_path(@starship) do %>
+        <i class="fas fa-undo-alt"></i> Back
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<%= javascript_pack_tag 'bookings_new' %>
