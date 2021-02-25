@@ -13,8 +13,8 @@
         <%= cl_image_tag @starship.photo.key, height: 260, width: 375, crop: :fill %>
       </div>
       <div class="show_info">
-        <p class="show_card_text">Model: <%= @starship.model %></p>
-        <p class="show_card_text">Price: <%= @starship.cost %>/day</p>
+        <p class="show_card_text"><strong><%= @starship.name %></strong></p>
+        <p class="show_card_text">Price: £<%= @starship.cost %>/day</p>
         <p class="show_card_text">Location: <%= @starship.location %></p>
         <p class="show_card_text">Description: <%= @starship.description %></p>
         <p class="show_card_text">Rating: <%= @starship.rating %></p>
