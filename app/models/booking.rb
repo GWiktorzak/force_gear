@@ -3,7 +3,6 @@ class Booking < ApplicationRecord
   belongs_to :starship
 
   validates :booking_start_date, :booking_end_date, presence: true
-  # validates :booking_start_date, :booking_end_date, uniqueness: { scope: :starship, message: "This starship is already booked for these dates"}
   validate :end_date_after_start_date
   validate :start_date_end_date_conflict
 
