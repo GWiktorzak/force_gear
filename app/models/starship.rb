@@ -8,4 +8,7 @@ class Starship < ApplicationRecord
   validates :location, presence: true
 
   has_one_attached :photo
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
