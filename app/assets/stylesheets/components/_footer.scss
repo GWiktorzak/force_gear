@@ -1,7 +1,5 @@
 .footer {
-  font-size: 12px;
   background-color: #C3C3C3;
-  color: black;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 16px;
@@ -20,10 +18,10 @@
   align-self: center;
 
   h5 {
-    font-size: 14px;
-    margin-top: 6px;
+   @include footer-text;
   }
   i{
+    color: $black-color;
     margin-left: 3px;
     padding: 3px;
   }
@@ -41,9 +39,8 @@
   align-self: center;
 
   a {
-    color: black;
+    @include footer-text;
     text-decoration: none;
-    font-size: 14px;
-    margin-right: 8px;
+    margin-left:12px;
   }
 }

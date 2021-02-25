@@ -1,32 +1,51 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8 col-sm-8 col-lg-8 ">
-      <h1>My Bookings</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Starship</th>
-            <th>Booking Start Date</th>
-            <th>Booking End Date</th>
-            <th></th>
-          </tr>
-        </thead>
+<div class="my-account-container">
+<div class="my-profile">
+  <h1>My Account</h1>
+  
+  <div class="user-info"> <p><%= @user.email %></p></div>
+    
+    <div class=".my-fleet">
+      <div class="starship-card">
+        <% @starships.each do |starship|%>
+        <div class="starship-card-img">
+          <%= cl_image_tag starship.photo.key, height: 160, width: 160, crop: :fill %>
+        </div>
+        <div class="starship-card-info">
+          <p><%= starship.name %></p>
+          <p><%= starship.description%></p>
+        </div>
+        <% end %>
+      </div>
 
-        <tbody>
-          <% @bookings.each do |booking| %>
-            <tr>
-              <td><%= link_to booking.starship.name, booking.starship, class: 'table-column-one' %></td>
-              <td><%= booking.booking_start_date %></td>
-              <td><%= booking.booking_end_date %></td>
-              <td>
-                <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete booking for #{booking.starship.name}?" } do %>
-                  <i class="far fa-trash-alt"></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
     </div>
-  </div>
+ 
+</div>
+
+<div class="my-bookings">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Starship</th>
+        <th>Booking Start Date</th>
+        <th>Booking End Date</th>
+        <th></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= link_to booking.starship.name, booking.starship, class: 'table-column-one' %></td>
+          <td><%= booking.booking_start_date %></td>
+          <td><%= booking.booking_end_date %></td>
+          <td>
+            <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete booking for #{booking.starship.name}?" } do %>
+              <i class="far fa-trash-alt bin"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 </div>
