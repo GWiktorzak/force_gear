@@ -5,9 +5,7 @@ class Starship < ApplicationRecord
 
   validates :name, presence: true
   validates :cost, presence: true
-  validates :crew, presence: true
-  validates :passengers, presence: true
-  validates :cargo_capacity, presence: true
+  validates :description, presence: true
   validates :location, presence: true, inclusion: { in: LOCATION }
 
   has_one_attached :photo
