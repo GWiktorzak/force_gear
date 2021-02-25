@@ -2,34 +2,44 @@
   <div class="header_and_photos">
     <div class="header_and_location">
       <div class="header">
-        <h3><%= @starship.name %></h3>
+        <h3><%= @starship.name.upcase %></h3>
       </div>
       <div class="location">
-        <p>4.69 rating / superhost / location of starship - In a galaxy far away (Staines)
+        <p>4.69 rating | superhost | location of starship - In a galaxy far, far away
       </div>
     </div>
-    <div class="photo_and_info d-flex">
+    <div class="photo_and_bookings d-flex justify-content">
       <div class="photo">
         <%= cl_image_tag @starship.photo.key, height: 260, width: 375, crop: :fill %>
       </div>
-      <div class="show_info">
-        <p class="show_card_text"><strong><%= @starship.name %></strong></p>
-        <p class="show_card_text">Price: £<%= @starship.cost %>/day</p>
-        <p class="show_card_text">Location: <%= @starship.location %></p>
-        <p class="show_card_text">Description: <%= @starship.description %></p>
-        <p class="show_card_text">Rating: <%= @starship.rating %></p>
-        <%= link_to new_starship_booking_path(@starship), class: 'btn btn-primary' do %>
-          Make a booking
-          <% end %><br>
-        <%= link_to 'Edit', edit_starship_path %>
+      <div class="bookings-form">
+        <%= render "bookings_form" %>
 
-          <%= link_to "Delete",starship_path(@starship),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
       </div>
     </div>
+    <div class=showpage-btn-container>
+      <%= link_to new_starship_booking_path(@starship), class: 'booking-btn' do %>
+        Make a booking
+        <br>
+        <% end %><br>
+      <%= link_to 'Edit', edit_starship_path, class: 'edit-delete-btn' %>
 
+        <%= link_to "Delete",starship_path(@starship), class: 'edit-delete-btn',
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+    </div>
+    <div class="show_info">
+      <p class="show_card_text"><strong><%= @starship.name.upcase %></strong></p>
+      <p class="show_card_text">Price: £<%= @starship.cost %>/day</p>
+      <p class="show_card_text">Location: <%= @starship.location %></p>
+      <p class="show_card_text">Description: <%= @starship.description %></p>
+      <p class="show_card_text">Rating: <%= @starship.rating %></p>
+      <br>
+    </div>
+    <div class="text">
 
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sit est delectus tempora optio pariatur dicta, autem placeat labore sunt adipisci ut. Sit rerum, assumenda natus voluptatibus libero, eum id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos enim dolorum, quaerat velit corrupti, incidunt deserunt tempore modi iusto? Rerum placeat officiis aut odit provident, earum natus nobis deleniti reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsa ab, repellendus error fuga aperiam corporis, natus id beatae asperiores quas cumque similique ad impedit repellat eum, nostrum assumenda reiciendis!</p>
+    </div>
   </div>
 </div>
 

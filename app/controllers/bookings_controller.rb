@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @user = current_user
     @bookings = @user.bookings
   end
-  
+
   def new
     find_starship
     @booking = Booking.new
@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to starship_path(@starship)
     else
-      render :new
+      render "starships/show"
     end
   end
 
