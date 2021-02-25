@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @user = current_user
     @bookings = @user.bookings
   end
-  
+
   def new
     @booking = Booking.new
   end
@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bookings_path, notice: "Booking for #{@booking.starship.name} confirmed!"
     else
-      render :new
+      render "starships/show"
     end
   end
 

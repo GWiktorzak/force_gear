@@ -1,0 +1,10 @@
+<%= simple_form_for [@starship, @booking] do |f| %>
+  <div class="form-inputs">
+    <%= f.input :booking_start_date, as: :date, html5: true, label_html: {class: 'booking-label' }, input_html: { class: "booking-btn"} %>
+    <%= f.input :booking_end_date, as: :date, html5: true,label_html: {class: 'booking-label' }, input_html: { class: "booking-btn"} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, { class: "booking-btn mt-0", value: "Create Booking" } %>
+  </div>
+<% end %>

@@ -61,7 +61,7 @@
   text-decoration: none;
 	cursor: pointer;
   width: 80%;
-  
+
 	&:hover {
 		transform: translateY(-2px);
     background-color:rgb(255, 69, 58);
@@ -77,4 +77,65 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+
+.booking-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: none;
+  color: #f3cb08;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border: 1px solid #f3cb08;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: #f7cf08;
+    color: black;
+    text-decoration: none;
+  }
+  &:active {
+    transform: translateY(0)
+  }
+}
+
+.edit-delete-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: none;
+  color: rgb(242, 242, 247) ;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border: 1px solid #f3cb08;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: #f7cf08;
+    color: black;
+    text-decoration: none;
+  }
+  &:active {
+    transform: translateY(0)
+  }
 }
