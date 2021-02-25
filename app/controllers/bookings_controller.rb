@@ -34,8 +34,8 @@ class BookingsController < ApplicationController
   end
 
   def calculate_price
-    end_date = Date.new(params["booking"]["booking_end_date(1i)"].to_i, params["booking"]["booking_end_date(2i)"].to_i, params["booking"]["booking_end_date(3i)"].to_i)
-    start_date = Date.new(params["booking"]["booking_start_date(1i)"].to_i, params["booking"]["booking_start_date(2i)"].to_i, params["booking"]["booking_start_date(3i)"].to_i)
+    end_date = Date.new(params["booking"]["booking_end_date"].to_i)
+    start_date = Date.new(params["booking"]["booking_start_date"].to_i)
     days = ((end_date - start_date) + 1).to_i
     @starship.cost * days
   end
