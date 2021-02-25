@@ -15,18 +15,18 @@ number = 1
   starships_resource = JSON.parse(starships_seed)
   data = starships_resource['results']
   user_id = 1
-  location = %s[London Paris Berlin Vienna Rome Madrid Lisbon Warsaw]
-  lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  rating = (0..5).to_a
 
   data.each do |starship|
+    locations = ["London", "Paris", "Berlin", "Vienna", "Rome", "Madrid", "Lisbon", "Warsaw"]
+    lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    ratings = (0..5).to_a
     starship = Starship.create!(
       name: starship['name'],
       cost: starship['cost_in_credits'],
       description: lorem,
-      rating: rating,
+      rating: ratings.sample,
       user_id: User.last.id,
-      location: location.sample
+      location: locations.sample
     )
     user_id += 1
     p starship.id
