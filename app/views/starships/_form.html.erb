@@ -3,16 +3,9 @@
   <%= simple_form_for(@starship) do |f| %>
     <div class="fg-card">
       <%= f.input :name %>
-      <%= f.input :model %>
-      <%= f.input :manufacturer %>
       <%= f.input :cost %>
-      <%= f.input :length %>
-      <%= f.input :max_speed %>
-      <%= f.input :crew %>
-      <%= f.input :passengers %>
-      <%= f.input :cargo_capacity %>
-      <%= f.input :starship_class %>
       <%= f.input :location %>
+      <%= f.input :description %>
       <%= f.input :photo, as: :file %>
       <div class="form-inputs">
         <%= f.button :submit, class: "custom-button" %>

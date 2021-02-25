@@ -1,12 +1,12 @@
 class StarshipsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[show index]
+  before_action :set_starship, only: %i[show edit update destroy]
 
   def index
     @starships = Starship.all
   end
 
   def show
-    @starship = Starship.find(params[:id])
   end
 
   def new
@@ -14,11 +14,9 @@ class StarshipsController < ApplicationController
   end
 
   def edit
-    @starship = Starship.find(params[:id])
   end
 
   def update
-    @starship = Starship.find(params[:id])
     @starship.update(starship_params)
     redirect_to starship_path(@starship)
   end
@@ -33,13 +31,16 @@ class StarshipsController < ApplicationController
   end
 
   def destroy
-    @starship = Starship.find(params[:id])
     @starship.destroy
 
     redirect_to root_path
   end
 
   private
+
+  def set_starship
+    @starship = Starship.find(params[:id])
+  end
 
   def starship_params
     params.require(:starship).permit(:name, :model, :manufacturer, :cost, :length, :max_speed, :crew, :passengers,
