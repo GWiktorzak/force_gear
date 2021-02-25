@@ -4,6 +4,12 @@
     <%= f.input :booking_end_date, as: :date, html5: true %>
   </div>
 
+  <div class="price-calculator" style="color: white">
+    <p id="price">Price per Day: £<span id="price-per-day"><%= @starship.cost %></span></p>
+    <br>
+    <p id="total-price">Total: £0</p>
+  </div>
+
   <div class="form-actions">
     <%= f.button :submit, { class: " button btn btn-light", value: "Create Booking" } %>
   </div>
