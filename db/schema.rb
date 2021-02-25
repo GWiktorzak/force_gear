@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_125922) do
+ActiveRecord::Schema.define(version: 2021_02_25_112901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,19 +56,13 @@ ActiveRecord::Schema.define(version: 2021_02_23_125922) do
 
   create_table "starships", force: :cascade do |t|
     t.string "name"
-    t.string "model"
-    t.string "manufacturer"
     t.string "cost"
-    t.string "length"
-    t.string "max_speed"
-    t.string "crew"
-    t.string "passengers"
-    t.string "cargo_capacity"
-    t.string "starship_class"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.string "location"
+    t.text "description"
+    t.integer "rating", default: 0
     t.index ["user_id"], name: "index_starships_on_user_id"
   end
 
