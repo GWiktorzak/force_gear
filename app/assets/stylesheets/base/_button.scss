@@ -1,3 +1,24 @@
+// home Btn
+.search-btn {
+  opacity: 1;
+  margin-left: 20px;
+  border: 1.6px solid #F7CD07;
+  padding: 16px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #F7CD07;
+  font-weight: bold;
+
+}
+
+.search-btn:hover {
+  text-decoration: none;
+  box-shadow: 2px 2px 16px #F7CD07;
+  color: #F7CD07;
+
+}
+
+// form btn 
 
 .fg-form .cta-btn {
 	letter-spacing: 1.6px;

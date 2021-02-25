@@ -1,16 +1,11 @@
 
-body {
-  // background-color: #000000;
-}
-
 .fg_logo h1 {
   font-family: 'Chakra Petch', sans-serif;
-  color: #F3CC09
+  color: #F3CC09;
+  font-size: 64px;
 }
 
-.text p {
-  color: #ffff
-}
+
 
 .home {
   height: 100vh;
@@ -37,28 +32,14 @@ body {
     color: #FFF;
     font-size: 18px;
     padding: 0px 0px 0px 20px;
-    width: 250px;
+   p {
+      color: #ffff;
+      font-size: 20px;
+    }
   }
 
 
-.search-btn {
-  opacity: 1;
-  margin-left: 20px;
-  border: 1.6px solid #F7CD07;
-  padding: 16px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  color: #F7CD07;
-  font-weight: bold;
 
-}
-
-.search-btn:hover {
-  text-decoration: none;
-  box-shadow: 2px 2px 16px #F7CD07;
-  color: #F7CD07;
-
-}
 
 
 
