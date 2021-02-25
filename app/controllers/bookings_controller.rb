@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params.merge(user_id: current_user.id))
-    find_starshipgit 
+    find_starship
     @booking.starship = @starship
     if @booking.save
       redirect_to starship_path(@starship)
