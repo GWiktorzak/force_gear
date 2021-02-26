@@ -3,7 +3,7 @@
 //}
 
 #show_page {
-  margin: 2rem 3rem;
+  margin: 3rem 4rem;
 }
 
 .header h3 {
@@ -16,6 +16,12 @@
   color: #ffff;
 }
 
+.text {
+  color: #ffff;
+  max-width: 800px;
+  text-align: justify;
+}
+
 .show_card_text {
   color: #ffff;
   margin: 0;
@@ -24,13 +30,17 @@
 .show_info {
   margin-left: 0px;
   margin-top: 1rem;
+
 }
 
 .showpage-btn-container {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .photo_and_bookings {
-
+  display: flex;
+  justify-content: space-between;
 }
+
+
