@@ -13,10 +13,10 @@
 
 // Your CSS partials
 @import "base/index";
-@import "components/index";	@import "components/index";
-@import "pages/index";	@import "pages/index";
+@import "components/index";	
+@import "pages/index";
 @import "base/index";	// bookings (myAccount)
-@import 'pages/booking/index';
+// @import 'pages/booking/index';
 
 
 body {
