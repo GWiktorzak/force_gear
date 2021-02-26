@@ -33,9 +33,9 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector(".home")) {
     homepage();
   }
-
-});
-
-document.addEventListener('turbolinks:load', () => {
   initMapbox();
 });
+
+// document.addEventListener('turbolinks:load', () => {
+//   initMapbox();
+// });
