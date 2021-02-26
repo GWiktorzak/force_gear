@@ -1,14 +1,14 @@
 .footer {
-  text-align: center;	
+  text-align: center;
   font-size: 14px;
-  background-color: #C3C3C3;	  
-  color: black;	  
+  background-color: #C3C3C3;
   color: black;
-  h2 {	  
+  color: black;
+  h2 {
     display: grid;
-    font-size: 14px;	  
+    font-size: 14px;
     grid-template-columns: 1fr 2fr 1fr;
-    color: black;	  
+    color: black;
     padding: 16px;
   }
 }
@@ -33,19 +33,19 @@
     color: $black-color;
     margin-left: 3px;
     padding: 3px;
-  }	  
+  }
 }
 
 
 .footer-links {
 
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-self: center;
 
   grid-column: 3/4;
   justify-items: center;
-  align-self: center;
+  align-items: center;
 
   a {
     @include footer-text;
@@ -53,5 +53,7 @@
     text-decoration: none;
     font-size: 14px;
     margin-right: 8px;
+
+
   }
 }

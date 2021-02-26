@@ -13,14 +13,14 @@
 
 // Your CSS partials
 @import "base/index";
-@import "components/index";	
+@import "components/index";
 @import "pages/index";
 @import "base/index";	// bookings (myAccount)
 // @import 'pages/booking/index';
 
 
 body {
-  background: black;
+  background: #0C111A;
   height: 100vh;
 }
 
@@ -29,3 +29,10 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    color: #F7CD07;
+    letter-spacing: 2px;
+    padding: 0px 0px 0px 20px;
+  }
