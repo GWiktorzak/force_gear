@@ -1,7 +1,6 @@
 .card {
   display: flex;
   flex-direction: row;
-  right: 30px;
   width: 100%;
   flex-grow: 1;
 }
@@ -20,6 +19,7 @@
   }
   .card-price {
     font-weight: bolder;
+    margin-right: 16px;
   }
 }
 
@@ -42,5 +42,5 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 16px;
+  margin: 8px 0;
 }
