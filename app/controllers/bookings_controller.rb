@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   def index
     @user = current_user
     @bookings = @user.bookings
-    @starships = Starship.where(user_id: @user.id)
+    @user_starships = Starship.where(user_id: @user.id)
   end
 
   def new
