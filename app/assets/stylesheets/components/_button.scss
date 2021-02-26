@@ -1,3 +1,16 @@
+// navbar btn
+.nav-add-btn {
+	border: 1px solid $black-color;
+	border-radius: 24px;
+	padding: 8px 16px;
+	color: white;
+	background: #1c1c1e;
+
+	&:hover {
+		color: #f3cc09;
+	}
+}
+
 // home Btn
 .search-btn {
   opacity: 1;
@@ -44,41 +57,7 @@
 	}
 }
 
-
-
-.fg-form .cta-red {
-
-	letter-spacing: 1.4px;
-	padding: 7px 14px;
-	font-size: 14px;
-	background-color: none;
-	color: rgba(255, 69, 58, .6);
-	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	border: 1px solid rgba(255, 69, 58, .6);
-	border-radius: 3px;
-  text-decoration: none;
-	cursor: pointer;
-  width: 80%;
-
-	&:hover {
-		transform: translateY(-2px);
-    background-color:rgb(255, 69, 58);
-		color: black;
-	}
-	&:active {
-		transform: translateY(0)
-	}
-}
-
-.div-btns {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
+// booking btn
 
 .booking-btn {
   margin-top: 1rem;
