@@ -6,13 +6,8 @@
 }
 .footer-icons {
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
+  @include flex-col-center;
   color: black;
-  
   grid-column: 2/3;
   justify-items: center;
   align-self: center;
@@ -27,12 +22,8 @@
   }
 }
 
-
 .footer-links {
-
-  display: flex; 
-  justify-content: flex-end;
-  align-items: center;
+@include flex-row-center;
 
   grid-column: 3/4;
   justify-items: center;

@@ -1,23 +1,32 @@
+
+.page-header {
+@include page-header;
+}
+.card-title {
+  @include card-title;
+}
 .my-account-container {
   color: white;
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-column: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  .my-profile {
-    margin-top: 32px;
-    grid-column: 1/2;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    .my-fleet {
-      display:block;
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
+}
+.my-profile {
+  margin-top: 32px;
+  grid-column: 1/2;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.my-fleet {
+  display:block;
+  width: 100%;
+  margin: 0 auto;
+  align-self: stretch;
 }
 // card starship
 .starship-card {
@@ -34,33 +43,5 @@
 
 
 
-.my-bookings{
-  margin-top: 32px;
-  display: inline-block;
-  grid-column: 2/3;
-  justify-self: center;
-  align-self: start;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 6px;
-  padding: 16px;
 
-
-  .table thead  th{
-    color: black;
-    border-collapse: collapse;
-    text-align: center;
-  }
-  .table tbody td {
-    color: black;
-    border-collapse: collapse;
-    text-align: center;
-    vertical-align: middle;
-  }
-  .table tbody td a{
-    color: #F7CD07;
-  }
-  .bin{
-    color: red;
-  }
-}
 

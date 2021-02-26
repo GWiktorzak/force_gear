@@ -12,9 +12,11 @@
 .cards {
   margin-bottom: 0;
 }
-
+.card-title {
+  @include card-title;
+}
 .card-text {
-  padding: 8px;
+  @include text;
 }
 
 #map {

@@ -1,6 +1,6 @@
 <div class="my-account-container">
 <div class="my-profile">
-  <h1>My Account</h1>
+  <h1 class="page-header">My Account</h1>
   
   <div class="user-info"> <p><%= @user.email %></p></div>
     
@@ -11,7 +11,7 @@
           <%= cl_image_tag starship.photo.key, height: 160, width: 160, crop: :fill %>
         </div>
         <div class="starship-card-info">
-          <p><%= starship.name %></p>
+          <p class="card-title"><%= starship.name %></p>
           <p><%= starship.description%></p>
         </div>
         <% end %>

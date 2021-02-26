@@ -26,3 +26,33 @@
   color: $black-color;
   line-height: 1.4;
 }
+
+@mixin page-header {
+  color: $black-color;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1.6;
+  margin: 16px 0px;
+  
+}
+
+@mixin card-title {
+  color: $black-color;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1.1;
+  margin: 8px 0px;
+}
+
+@mixin text {
+  color: $black-color;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+  margin: 8px 0px;
+}

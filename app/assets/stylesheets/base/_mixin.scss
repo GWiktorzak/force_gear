@@ -1,5 +1,12 @@
-@mixin flex-center {
+@mixin flex-row-center {
   display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-col-center {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
