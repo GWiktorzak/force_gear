@@ -1,32 +1,63 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-8 col-sm-8 col-lg-8 ">
-      <h1>My Bookings</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Starship</th>
-            <th>Booking Start Date</th>
-            <th>Booking End Date</th>
-            <th></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @bookings.each do |booking| %>
+      <div class="account-header">
+        <h1>My Account</h1>
+        <p id="email"><%= @user.email %></p>
+      </div>
+      <h2>My Bookings</h2>
+      <div class="bookings-table">
+        <table class="table">
+          <thead>
             <tr>
-              <td><%= link_to booking.starship.name, booking.starship, class: 'table-column-one' %></td>
-              <td><%= booking.booking_start_date %></td>
-              <td><%= booking.booking_end_date %></td>
-              <td>
-                <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete booking for #{booking.starship.name}?" } do %>
-                  <i class="far fa-trash-alt"></i>
-                <% end %>
-              </td>
+              <th>Starship</th>
+              <th>Booking Start Date</th>
+              <th>Booking End Date</th>
+              <th>Price</th>
+              <th></th>
             </tr>
+          </thead>
+
+          <tbody>
+            <% @bookings.each do |booking| %>
+              <tr>
+                <td><%= link_to booking.starship.name, booking.starship, class: 'table-column-one' %></td>
+                <td><%= booking.booking_start_date %></td>
+                <td><%= booking.booking_end_date %></td>
+                <td><%= booking.price %></td>
+                <td>
+                  <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete booking for #{booking.starship.name}?" } do %>
+                    <i class="far fa-trash-alt"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="my-starships">
+        <h2>My Starships</h2>
+
+        <div class="starships-list">
+          <% @user_starships.each do |starship| %>
+            <div class="card mb-3">
+              <div class="card-image">
+                <%= cl_image_tag starship.photo.key, height: 211, width: 300, crop: :fill %>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><%= starship.name %></h5>
+                <p class="card-text"><%= starship.description.truncate(50) %></p>
+                <div class="link-and-price">
+                  <p class="card-link"><%= link_to "Step inside", starship_path(starship) %></p>
+                  <p class="card-price">£<%= starship.cost %></p>
+                </div>
+                <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(starship.updated_at) %></small></p>
+              </div>
+            </div>
           <% end %>
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>

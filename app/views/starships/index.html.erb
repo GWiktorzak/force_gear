@@ -5,7 +5,7 @@
       <% @starships.each do |starship| %>
         <div class="card mb-3">
           <div class="card-image">
-            <%= image_tag "X-Wing.jpg", alt: "alttext", class: "card-image" %>
+            <%= cl_image_tag starship.photo.key, height: 211, width: 300, crop: :fill %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= starship.name %></h5>
