@@ -1,8 +1,6 @@
 
 .fg_logo h1 {
-  font-family: 'Chakra Petch', sans-serif;
-  color: #F3CC09;
-  font-size: 64px;
+  @include brand;
 }
 
 

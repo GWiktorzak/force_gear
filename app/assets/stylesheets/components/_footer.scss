@@ -1,11 +1,15 @@
 .footer {
   text-align: center;	
-  font-size: 12px;	  font-size: 12px;
-  background-color: #C3C3C3;	  background-color: #C3C3C3;
-  color: black;	  color: black;
-  h2 {	  display: grid;
-    font-size: 12px;	  grid-template-columns: 1fr 2fr 1fr;
-    color: black;	  padding: 16px;
+  font-size: 14px;
+  background-color: #C3C3C3;	  
+  color: black;	  
+  color: black;
+  h2 {	  
+    display: grid;
+    font-size: 14px;	  
+    grid-template-columns: 1fr 2fr 1fr;
+    color: black;	  
+    padding: 16px;
 }
 .footer-icons {
 
@@ -13,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   color: black;
 
   grid-column: 2/3;
@@ -21,10 +25,11 @@
   align-self: center;
 
   h5 {
-    font-size: 14px;
-    margin-top: 6px;
+    @include footer-text;
+    color: $black-color;
   }
   i{
+    color: $black-color;
     margin-left: 3px;
     padding: 3px;
   }	  }
@@ -42,6 +47,7 @@
   align-self: center;
 
   a {
+    @include footer-text;
     color: black;
     text-decoration: none;
     font-size: 14px;
