@@ -1,6 +1,26 @@
-.card-image {
-  height: 100%;
+.card {
+  display: flex;
+  flex-direction: row;
+  right: 30px;
   width: 100%;
+  flex-grow: 1;
+}
+
+.card-image {
+  width: 300px;
+}
+
+.card-body {
+  height: 211px;
+  h5 {
+    margin-bottom: 4px;
+  }
+  p {
+    margin: 0;
+  }
+  .card-price {
+    font-weight: bolder;
+  }
 }
 
 .card-link a {
@@ -12,4 +32,15 @@
 
 .card-title {
   font-weight: bold;
+}
+
+.card-text {
+  padding: 8px;
+}
+
+.link-and-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 16px;
 }
