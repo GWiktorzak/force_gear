@@ -5,23 +5,20 @@
         <h3><%= @starship.name.upcase %></h3>
       </div>
       <div class="location">
-        <p>4.69 rating | superhost | location of starship - In a galaxy far, far away
+        <p>4.69 <i class="fas fa-star"></i> | superhost <i class="fas fa-heart"></i> |  <%= @starship.location %> | <i class="fas fa-wifi"></i>   <i class="fas fa-space-shuttle"></i></p>
       </div>
     </div>
-    <div class="photo_and_bookings d-flex justify-content">
+    <div class="photo_and_bookings">
       <div class="photo">
-        <%= cl_image_tag @starship.photo.key, height: 260, width: 375, crop: :fill %>
+        <%= cl_image_tag @starship.photo.key, height: 340, width: 445, crop: :fill %>
       </div>
       <div class="bookings-form">
         <%= render "bookings_form" %>
 
       </div>
     </div>
+    <hr class="hr">
     <div class=showpage-btn-container>
-      <%= link_to new_starship_booking_path(@starship), class: 'booking-btn' do %>
-        Make a booking
-        <br>
-        <% end %><br>
       <%= link_to 'Edit', edit_starship_path, class: 'edit-delete-btn' %>
 
         <%= link_to "Delete",starship_path(@starship), class: 'edit-delete-btn',
@@ -31,7 +28,6 @@
     <div class="show_info">
       <p class="show_card_text"><strong><%= @starship.name.upcase %></strong></p>
       <p class="show_card_text">Price: £<%= @starship.cost %>/day</p>
-      <p class="show_card_text">Location: <%= @starship.location %></p>
       <p class="show_card_text">Description: <%= @starship.description %></p>
       <p class="show_card_text">Rating: <%= @starship.rating %></p>
       <br>
@@ -43,4 +39,5 @@
   </div>
 </div>
 
+<%= javascript_pack_tag 'bookings_new' %>
 
