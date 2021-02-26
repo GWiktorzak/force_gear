@@ -9,21 +9,19 @@
 
 .cards {
   margin-bottom: 0;
-}
-
-.card-text {
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: 770px;
 }
 
 #map {
-  height: 100vh;
+  width: 100%;
+  max-width: 550px;
+  min-width: 300px;
+  height: 95vh;
   position: sticky;
   top: 56px;
   margin-left: 16px;
   margin-bottom: 16px;
   left: 20px;
-}
-
-.card {
-  right: 30px;
 }

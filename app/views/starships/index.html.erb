@@ -1,30 +1,26 @@
 <div class="container">
-  <br>
   <h1>STARSHIPS</h1>
   <div class="index-body">
     <div class="cards">
       <% @starships.each do |starship| %>
         <div class="card mb-3">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <%= image_tag "X-Wing.jpg", alt: "alttext", class: "card-image" %>
+          <div class="card-image">
+            <%= image_tag "X-Wing.jpg", alt: "alttext", class: "card-image" %>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= starship.name %></h5>
+            <p class="card-text"><%= starship.description.truncate(50) %></p>
+            <div class="link-and-price">
+              <p class="card-link"><%= link_to "Step inside", starship_path(starship) %></p>
+              <p class="card-price">£<%= starship.cost %></p>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"><%= starship.name %></h5>
-                <p class="card-text"><%= starship.description %></p>
-                <p class="card-text"><%= starship.cost %></p>
-                <p class="card-link"><%= link_to "Step inside", starship_path(starship) %></p>
-                <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(starship.updated_at) %></small></p>
-              </div>
-            </div>
+            <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(starship.updated_at) %></small></p>
           </div>
         </div>
 
       <% end %>
     </div>
     <div id="map"
-      style="width: 100%; height: 600px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
