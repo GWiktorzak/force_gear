@@ -13,14 +13,14 @@
 
 // Your CSS partials
 @import "base/index";
-@import "components/index";	
+@import "components/index";
 @import "pages/index";
 @import "base/index";	// bookings (myAccount)
 // @import 'pages/booking/index';
 
 
 body {
-  background: black;
+  background: #0C111A;
   height: 100vh;
 }
 
